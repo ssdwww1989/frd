@@ -109,12 +109,13 @@ $(function () {
                 ft = $(".feed").html()
                 done();
             });
-        });
-        it("Content changes", function (done) {
             loadFeed(1, function () {
                 st = $(".feed").html();
                 done();
             })
+        });
+        it("Content changes", function () {
+
             expect(ft).not.toEqual(st);
         })
 
